@@ -186,7 +186,7 @@ def determinaFechaValida():
     return fecha
 
 def determinaEstacion(hemisferio,fecha):
-    #Se usa el mismo anio que el ingresado, dado que datetime() requiere si o si el anio
+    #datetime requiere un anio, se elegio de forma aleatoria el anio 2000
     verano=datetime(2000,12,21)
     otonio=datetime(2000,3,21)
     invierno=datetime(2000,6,21)
