@@ -7,6 +7,8 @@ def actividad1():
 
 #actividad 2
 def actividad2():
+
+    #Validacion que fuerza a ingesar un dato valido para continuar
     while True:
         try:
             numero = int(input("Ingrese un numero: "))
@@ -20,7 +22,7 @@ def actividad2():
 #actividad3()
 def actividad3():
 
-    #Validaciones
+    #Validacion que fuerza a ingesar un dato valido para continuar
     while True:
         try:
             numero1=int(input("Ingrese el primer numero: "))
@@ -46,6 +48,7 @@ def actividad4():
     numero=1
     sumatoria=0
     while numero!=0:
+        #Validacion que fuerza a ingesar un dato valido para continuar
         while True:
             try:
                 numero=int(input("Ingrese un numero: "))
@@ -63,6 +66,7 @@ def actividad5():
     numIntento=4 #Valor aleatorio para poder ingresar al while, el mismo se va a sobreeescribir
     numero=random.randint(1,10)
     while numIntento!=numero:
+        #Validacion que fuerza a ingesar un dato valido para continuar
         while True:
             try:
                 numIntento=int(input("Ingrese un numero del 1 al 10: "))
@@ -83,6 +87,7 @@ def actividad6():
 #Actividad 7
 def actividad7():
     numero=0
+    #Validacion que fuerza a ingesar un dato valido para continuar
     while True:
         try:
             numero=int(input("Ingrese un numero entero positivo: "))
@@ -99,7 +104,7 @@ def actividad7():
 
 
 #Actividad 8
- def actividad8():
+def actividad8():
     pares = 0
     impares = 0
     positivos = 0
@@ -114,4 +119,64 @@ def actividad7():
                 print("Valor invalido, solo numeros ")
             else:
                 break
-    if
+        if numero>=0:
+            positivos+=1
+        else:
+            negativos+=1
+        if numero%2==0:
+            pares+=1
+        else:
+            impares+=1
+    print(f"Se ingresaron numeros: {positivos} positivos, {negativos} negativos, {pares} pares, {impares} impares")
+
+#Actividad 9
+def actividad9():
+    sumatoria=0
+    elementos=0
+    numero=0
+    for i in range(0,100):
+        while True:
+            try:
+                numero=int(input("Ingrese un numero: "))
+            except ValueError:
+                print("Valor invalido, solo numeros ")
+            else:
+                break
+        sumatoria+=numero
+        elementos+=1
+    
+    print(f"El promedio de los {elementos} numeros ingresados es de {sumatoria/elementos}")
+
+#Actividad 10
+def actividad10():
+    numero=0
+    while True:
+        try:
+            numero=int(input("Ingrese un numero a invertir "))
+        except ValueError:
+            print("El valor ingresado no es un numero")
+        else:
+            break
+    
+    #Reutilizamos la variable, es mas facil trabajar como un arreglo de chars para cambiar el orden
+    numero=str(numero)
+    invertido=""
+
+    #len(numero)-1 para evitar que se pase del rango dado que los arreglos inician en 0 y no en 1
+    #-1, en el limite inferior para permitir acceder al primer elemento del arreglo (numero[0])
+    #-1 como ultimo parametro para indicar que se recorrera el arreglo desde el final hacia el principio
+    for i in range(len(numero)-1,-1,-1):
+        invertido+=numero[i]
+    print(f"Numero invertido es {invertido}")
+
+actividad1()
+actividad2()
+actividad3()
+actividad4()
+actividad5()
+actividad6()
+actividad7()
+actividad8()
+actividad9()
+actividad10()
+    
