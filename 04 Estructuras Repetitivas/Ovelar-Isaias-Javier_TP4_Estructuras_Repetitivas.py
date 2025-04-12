@@ -98,4 +98,20 @@ def actividad7():
     print(f"La suma de todos los nuneros del 0 al {numero} es de  {sumatoria}")
 
 
-actividad7()
+#Actividad 8
+ def actividad8():
+    pares = 0
+    impares = 0
+    positivos = 0
+    negativos = 0 
+    numero = 0
+
+    for i in range(0,100):
+        while True:
+            try:
+                numero=int(input("Ingrese un numero: "))
+            except ValueError:
+                print("Valor invalido, solo numeros ")
+            else:
+                break
+    if
