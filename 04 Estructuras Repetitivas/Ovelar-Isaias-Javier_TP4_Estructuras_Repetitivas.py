@@ -82,4 +82,20 @@ def actividad6():
 
 #Actividad 7
 def actividad7():
+    numero=0
+    while True:
+        try:
+            numero=int(input("Ingrese un numero entero positivo: "))
+        except ValueError:
+            print("Valor ingresado invalido")
+        else:
+            break
+
+    sumatoria=0
+    for i in range(0,numero):
+        sumatoria+=i
     
+    print(f"La suma de todos los nuneros del 0 al {numero} es de  {sumatoria}")
+
+
+actividad7()
