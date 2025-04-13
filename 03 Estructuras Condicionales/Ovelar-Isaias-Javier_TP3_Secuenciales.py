@@ -221,14 +221,6 @@ def actividad10():
     determinaEstacion(hemisferio,fecha)
 
 
-actividad1()
-actividad2()
-actividad3()
-actividad4()
-actividad5()
-actividad6()
-actividad7()
-actividad8()
-actividad9()
+
 actividad10()
     
