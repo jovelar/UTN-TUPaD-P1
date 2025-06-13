@@ -66,7 +66,23 @@ def ejercicio7(parametro):
     
     print(calcula_piramide(parametro))
 
-ejercicio7(4)
+def ejercicio8(parametro,digito):
+
+    def calcular_digito(numero,digito):
+        contador=0
+        if numero==0:
+            return 0
+        else:
+            #obtenemos el ultimo numero
+            num=numero%10
+            if num==digito:
+                contador+=1
+        return calcular_digito(numero//10,digito) + contador
+    
+    print(calcular_digito(parametro,digito))
+
+
+
     
                 
             
